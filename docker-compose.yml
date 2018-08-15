@@ -1,0 +1,12 @@
+---
+version: "2"
+services:
+  smashing:
+    image: visibilityspots/smashing
+    container_name: smashing_atlassian
+    ports:
+      - "8080:3030"
+    volumes:
+      - ./dashboards:/dashboards
+      - ./jobs:/jobs
+      - ./widgets:/widgets

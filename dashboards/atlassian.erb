@@ -1,0 +1,35 @@
+<script type='text/javascript'>
+  $(function() {
+  Dashing.widget_margins = [5, 5];
+  Dashing.numColumns = $(window).width() > $(window).height() ? 4 : 2;
+  Dashing.widget_base_dimensions = [
+    ($(window).width() / Dashing.numColumns) - (Dashing.widget_margins[0] * 2)
+    , (($(window).height() - 15) / (Dashing.numColumns == 2 ? 4 : 2)) - (Dashing.widget_margins[1] * 2)];
+});
+</script>
+
+<% content_for :title do %>Status Status Squares<% end %>
+
+<div class="gridster">
+    <ul>
+        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+            <div data-id="sss-jira7" data-view="ServerStatusSquares" data-title="JIRA 7"></div>
+            <i class="fa fa-tasks icon-background"></i>
+        </li>
+        <li data-row="1" data-col="2" data-sizex="1" data-sizey="1">
+            <div data-id="sss-jira6" data-view="ServerStatusSquares" data-title="JIRA 6"></div>
+            <i class="fa fa-calendar icon-background"></i>
+        </li>
+        <li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
+            <div data-id="sss-confluence" data-view="ServerStatusSquares" data-title="Confluence"></div>
+            <i class="fa fa-edit icon-background"></i>
+        </li>
+        <li data-row="1" data-col="4" data-sizex="1" data-sizey="1">
+            <div data-id="sss-stash" data-view="ServerStatusSquares" data-title="Stash"></div>
+            <i class="fa fa-bitbucket icon-background"></i>
+        </li>
+        <li data-row="2" data-col="1" data-sizex="2" data-sizey="1">
+            <div data-id="sss-newserver" data-view="ServerStatusSquares" data-title="New Server"></div>
+        </li>
+    </ul>
+</div>
